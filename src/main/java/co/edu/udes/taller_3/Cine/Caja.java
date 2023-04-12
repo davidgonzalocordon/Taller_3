@@ -3,7 +3,7 @@ package co.edu.udes.taller_3.Cine;
 
 public class Caja {
 private String box_id;
-private int change_available;
+    private int change_available;
 private Trabajador worker; 
 
     public Caja() {
@@ -15,6 +15,11 @@ private Trabajador worker;
         this.worker = worker;
     }
 
+    public Caja(String box_id, int change_available) {
+        this.box_id = box_id;
+        this.change_available = change_available;
+    }
+    
     public String getBox_id() {
         return box_id;
     }
