@@ -38,12 +38,16 @@ public class CrearCaja {
                     box_id = read.next();
                     System.out.println("Introdusca el cambio disponible: ");
                     change_available = read.nextInt();
-                    Caja box = new Caja(box_id, change_available);
+                    System.out.println("introduce nombre trabajador");
+                    String name=read.next();
+                    Trabajador worker = new Trabajador(name);
+                    
+                    Caja box = new Caja(box_id, change_available,worker.getName());
                     objet.add(box);
 
                     for (Caja e : objet)
                     {
-                        System.out.println("- N." + e.getBox_id() + "  cambio disponible " + e.getChange_available());
+                        System.out.println("- N." + e.getBox_id() + "  cambio disponible " + e.getChange_available()+" tiene como trabajador encargado a "+e.getName_worker());
                     }
 
                     System.out.println("Porfavor Ecoja la accion que desea hacer: ");
@@ -56,7 +60,7 @@ public class CrearCaja {
                 case 2:
                     for (Caja e : objet)
                     {
-                        System.out.println("- N." + e.getBox_id() + " cambio disponible " + e.getChange_available());
+                        System.out.println("- N." + e.getBox_id() + "  cambio disponible " + e.getChange_available()+" tiene como trabajador encargado a "+e.getName_worker());
                     }
 
                     System.out.println("Porfavor Ecoja la accion que desea hacer: ");

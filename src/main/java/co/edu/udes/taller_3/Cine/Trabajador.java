@@ -21,8 +21,8 @@ public class Trabajador {
         this.phone_number = phone_number;
     }
 
-    Trabajador(String name) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Trabajador(String name) {
+        this.name = name;
     }
 
     public String getName() {

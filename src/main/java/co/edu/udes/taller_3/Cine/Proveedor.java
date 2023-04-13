@@ -15,6 +15,10 @@ class Proveedor {
         this.movie_rights = derechos_peliculas;
     }
 
+    public Proveedor(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

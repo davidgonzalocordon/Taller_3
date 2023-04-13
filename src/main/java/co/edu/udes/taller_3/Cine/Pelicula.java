@@ -9,20 +9,30 @@ class Pelicula {
     private String id;
     private String kind_of_movie;
     private String age_restriction;
-    private Date duration;
-    private Proveedor supplier;
+    private Date release_date;
+    private String name_supplier;
 
     public Pelicula() {
     }
 
-    public Pelicula(String name, String id, String kind_of_movie, String age_restriction, Date duration, Proveedor supplier) {
+    public Pelicula(String name, String id, String kind_of_movie, String age_restriction, Date duration, String name_supplier) {
         this.name = name;
         this.id = id;
         this.kind_of_movie = kind_of_movie;
         this.age_restriction = age_restriction;
-        this.duration = duration;
-        this.supplier = supplier;
+        this.release_date = duration;
+        this.name_supplier = name_supplier;
     }
+
+    public Pelicula(String name, String id, String kind_of_movie, Date duration, String name_supplier) {
+        this.name = name;
+        this.id = id;
+        this.kind_of_movie = kind_of_movie;
+        this.release_date = duration;
+        this.name_supplier = name_supplier;
+    }
+    
+    
 
     public String getName() {
         return name;
@@ -57,11 +67,11 @@ class Pelicula {
     }
 
     public Date getDuration() {
-        return duration;
+        return release_date;
     }
 
     public void setDuration(Date duration) {
-        this.duration = duration;
+        this.release_date = duration;
     }
     
     
