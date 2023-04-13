@@ -24,6 +24,12 @@ public class Sala {
         this.chair = chair;
     }
 
+    public Sala(String id) {
+        this.id = id;
+    }
+    
+    
+
     public String getId() {
         return id;
     }

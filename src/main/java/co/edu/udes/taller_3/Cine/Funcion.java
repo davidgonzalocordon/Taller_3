@@ -4,21 +4,19 @@ package co.edu.udes.taller_3.Cine;
 import java.util.Date;
 
 class Funcion {
-    private Pelicula movie; 
-    private Sala room;
+    private String name_movie; 
+    private String room_id;
     private Date star_time;
     private Date end_time;
-    private Date date; 
 
     public Funcion() {
     }
 
-    public Funcion(Pelicula movie, Sala room, Date star_time, Date end_time, Date date) {
-        this.movie = movie;
-        this.room = room;
+    public Funcion(String name_movie, String room_id, Date star_time, Date end_time) {
+        this.name_movie = name_movie;
+        this.room_id = room_id;
         this.star_time = star_time;
         this.end_time = end_time;
-        this.date = date;
     }
 
     public Date getStar_time() {
@@ -37,13 +35,22 @@ class Funcion {
         this.end_time = end_time;
     }
 
-    public Date getDate() {
-        return date;
+    public String getName_movie() {
+        return name_movie;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setName_movie(String name_movie) {
+        this.name_movie = name_movie;
     }
+
+    public String getRoom_id() {
+        return room_id;
+    }
+
+    public void setRoom_id(String room_id) {
+        this.room_id = room_id;
+    }
+
     
     
     

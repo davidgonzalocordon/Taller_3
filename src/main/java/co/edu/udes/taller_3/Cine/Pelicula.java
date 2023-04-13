@@ -31,6 +31,10 @@ class Pelicula {
         this.release_date = duration;
         this.name_supplier = name_supplier;
     }
+
+    public Pelicula(String name) {
+        this.name = name;
+    }
     
     
 

@@ -1,22 +1,32 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
 package co.edu.udes.taller_3.Cine;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
 
-public class CrearPelicula {
+/**
+ *
+ * @author ASUS
+ */
+public class CrearFuncion {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formatoFechaHora = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         Scanner read = new Scanner(System.in);
         int Selection = 0, change_available;
-        List<Pelicula> objet = new ArrayList<Pelicula>();
-        String name_move, id, kind_of_movie, age_restriction, name_proveedor;
-        boolean have_age_restriction = false;
-        Date release_date;
+        List<Funcion> objet = new ArrayList<Funcion>();
+        String name_move, room_id;
+        Date start_date = null, end_date = null;
         System.out.println("Bienvenido porfavor Escoja una de las tres acciones: ");
         System.out.println("1) Crear");
         System.out.println("2) Lista");
@@ -38,51 +48,51 @@ public class CrearPelicula {
             switch (Selection)
             {
                 case 1:
+                    ;
                     System.out.println("Inserte el nombre de la pelicula: ");
                     name_move = read.next();
-                    System.out.println("Inserte la id de la pelicula:");
-                    id = read.next();
-                    System.out.println("Inserte el tipo de pelicula: ");
-                    kind_of_movie = read.next();
-                    System.out.println("Tiene Restriccion de edad? s/n");
-                    String decision = read.next();
-                    if (decision.equals("s"))
+                    Pelicula move = new Pelicula(name_move);
+                    System.out.println("Inserte la id de la sala: ");
+                    room_id = read.next();
+                    Sala room = new Sala(room_id);
+                    while (start_date == null)
                     {
-                        have_age_restriction = true;
-                        System.out.println("Innserte apartir de los cuantos años lo pueden ver las personas");
-                        age_restriction = "desde los "+read.next()+" años en adelante";
-                    }else{
-                        age_restriction="cual quier edad";
-                    }
-                    System.out.println("Ingrese la fecha en formato dd/MM/yyyy:");
-                    String fechaTexto = read.next();
+                        System.out.println("Ingrese la fecha y hora de inicio en formato dd/MM/yyyy HH:mm:");
+                        String fechaInicioTexto = read.nextLine();
 
-                    release_date = null;
-                    boolean repetir = true;
-                    do
-                    {
-                        System.out.println("Ingrese la fecha en formato dd/MM/yyyy:");
-                        fechaTexto = read.next();
-
+                        // Convertir la entrada del usuario a un objeto de tipo Date
                         try
                         {
-                            release_date = formatoFecha.parse(fechaTexto);
-                            repetir = false;
+                            start_date = formatoFechaHora.parse(fechaInicioTexto);
                         } catch (ParseException e)
                         {
-                            System.out.println("La fecha ingresada no tiene el formato correcto.");
+                            System.out.println("La fecha y hora de inicio ingresadas no tienen el formato correcto.");
+                            // e.printStackTrace();
                         }
-                    } while (repetir);
+                    }
 
-                    System.out.println("Inserte el nombre del proveedor: ");
-                    name_proveedor = read.next();
-
-                    Proveedor proveedor = new Proveedor(name_proveedor);
-                    Pelicula move = new Pelicula(name_move, id, kind_of_movie, age_restriction, release_date, name_proveedor);
-                    objet.add(move);
-                    for (Pelicula e : objet)
+                    while (end_date == null)
                     {
-                        System.out.println("- " + e.getName() + "  se estrena el  " + formatoFecha.format(e.getDuration()) + " es una pelicula de " + e.getKind_of_movie()+" y se puede ver a "+e.getAge_restriction());
+                        System.out.println("Ingrese la fecha y hora de salida en formato dd/MM/yyyy HH:mm:");
+                        String fechaSalidaTexto = read.nextLine();
+
+                        // Convertir la entrada del usuario a un objeto de tipo Date
+                        try
+                        {
+                            end_date = formatoFechaHora.parse(fechaSalidaTexto);
+                        } catch (ParseException e)
+                        {
+                            System.out.println("La fecha y hora de salida ingresadas no tienen el formato correcto.");
+                            // e.printStackTrace();
+                        }
+                    }
+
+                    Funcion funcion = new Funcion(move.getName(), room.getId(), start_date, end_date);
+
+                    objet.add(funcion);
+                    for (Funcion e : objet)
+                    {
+                        System.out.println("- la funcion de la pelicula " + e.getName_movie() + " empieza el " + e.getStar_time() + " y termina " + e.getEnd_time() + " en la sala " + e.getRoom_id());
                     }
 
                     System.out.println("Porfavor Ecoja la accion que desea hacer: ");
@@ -104,9 +114,9 @@ public class CrearPelicula {
 
                     break;
                 case 2:
-                    for (Pelicula e : objet)
+                    for (Funcion e : objet)
                     {
-                        System.out.println("- " + e.getName() + "  se estrena el  " + formatoFecha.format(e.getDuration()) + " es una pelicula de " + e.getKind_of_movie()+" y se puede ver a "+e.getAge_restriction());
+                        System.out.println("- la funcion de la pelicula " + e.getName_movie() + " empieza el " + e.getStar_time() + " y termina " + e.getEnd_time() + " en la sala " + e.getRoom_id());
                     }
 
                     System.out.println("Porfavor Ecoja la accion que desea hacer: ");
