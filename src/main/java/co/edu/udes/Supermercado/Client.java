@@ -1,20 +1,20 @@
-
 package co.edu.udes.Supermercado;
 
 public class Client {
-    private String name;  
-    private String dni; 
-    private String Email; 
-    private int Puntos; 
+
+    private String name;
+    private String dni;
+    private String email;
+    private int points;
 
     public Client() {
     }
 
-    public Client(String name, String dni, String Email, int Puntos) {
+    public Client(String name, String dni, String email, int points) {
         this.name = name;
         this.dni = dni;
-        this.Email = Email;
-        this.Puntos = Puntos;
+        this.email = email;
+        this.points = points;
     }
 
     public String getName() {
@@ -34,19 +34,19 @@ public class Client {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public int getPuntos() {
-        return Puntos;
+    public int getPoints() {
+        return points;
     }
 
-    public void setPuntos(int Puntos) {
-        this.Puntos = Puntos;
+    public void setPoints(int points) {
+        this.points = points;
     }
-   
+
 }

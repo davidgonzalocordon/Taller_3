@@ -3,25 +3,18 @@ package co.edu.udes.Supermercado;
 import java.util.Date;
 
 public class Employ {
-    private String name; 
-    private Date horario; 
-    private double sueldo; 
-    private String dni; 
-    private String numbre_celphone; 
+    private String name;
+    private Date schedule;
+    private double salary;
+    private String dni;
+    private String phone;
 
-    public Employ() {
-    }
-
-    public Employ(String name, Date horario, double sueldo, String dni, String numbre_celphone) {
+    public Employ(String name, Date schedule, double salary, String dni, String phone) {
         this.name = name;
-        this.horario = horario;
-        this.sueldo = sueldo;
+        this.schedule = schedule;
+        this.salary = salary;
         this.dni = dni;
-        this.numbre_celphone = numbre_celphone;
-    }
-
-    public Employ(String name) {
-        this.name = name;
+        this.phone = phone;
     }
 
     public String getName() {
@@ -32,20 +25,20 @@ public class Employ {
         this.name = name;
     }
 
-    public Date getHorario() {
-        return horario;
+    public Date getSchedule() {
+        return schedule;
     }
 
-    public void setHorario(Date horario) {
-        this.horario = horario;
+    public void setSchedule(Date schedule) {
+        this.schedule = schedule;
     }
 
-    public double getSueldo() {
-        return sueldo;
+    public double getSalary() {
+        return salary;
     }
 
-    public void setSueldo(double sueldo) {
-        this.sueldo = sueldo;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 
     public String getDni() {
@@ -56,12 +49,12 @@ public class Employ {
         this.dni = dni;
     }
 
-    public String getNumbre_celphone() {
-        return numbre_celphone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setNumbre_celphone(String numbre_celphone) {
-        this.numbre_celphone = numbre_celphone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
 }

@@ -1,41 +1,50 @@
 
 package co.edu.udes.Supermercado;
 
+import java.util.List;
+
 public class Bodega {
-    private String[] product_food; 
-    private int[] quantity_product;
-    private String name_worker; 
+    private String name;
+    private String location;
+    private List<Producto> productList;
+    private Employ manager;
 
-    public Bodega() {
+    public Bodega(String name, String location, Employ manager, List<Producto> listaProductos) {
+        this.name = name;
+        this.location = location;
+        this.manager = manager;
+        this.productList=listaProductos;
     }
 
-    public Bodega(String[] product_food, int[] quantity_product, String name_worker) {
-        this.product_food = product_food;
-        this.quantity_product = quantity_product;
-        this.name_worker = name_worker;
+    public String getName() {
+        return name;
     }
 
-    public String[] getProduct_food() {
-        return product_food;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setProduct_food(String[] product_food) {
-        this.product_food = product_food;
+    public String getLocation() {
+        return location;
     }
 
-    public int[] getQuantity_product() {
-        return quantity_product;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public void setQuantity_product(int[] quantity_product) {
-        this.quantity_product = quantity_product;
+    public Employ getManager() {
+        return manager;
     }
 
-    public String getName_worker() {
-        return name_worker;
+    public void setManager(Employ manager) {
+        this.manager = manager;
     }
 
-    public void setName_worker(String name_worker) {
-        this.name_worker = name_worker;
+    public List<Producto> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(List<Producto> productList) {
+        this.productList = productList;
     }
 }

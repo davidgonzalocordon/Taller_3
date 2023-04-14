@@ -2,39 +2,39 @@
 package co.edu.udes.Supermercado;
 
 public class Provedor {
-    private String nombre;
-    private String direccion;
-    private String telefono;
+    private String name;
+    private String address;
+    private String phone;
 
     public Provedor() {}
 
-    public Provedor(String nombre, String direccion, String telefono) {
-        this.nombre = nombre;
-        this.direccion = direccion;
-        this.telefono = telefono;
+    public Provedor(String name, String address, String phone) {
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getAddress() {
+        return address;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

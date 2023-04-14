@@ -4,15 +4,15 @@ package co.edu.udes.Supermercado;
 public class Caja {
    private String box_id;
     private int change_available;
-    private String name_worker;
+    private Employ employ;
 
     public Caja() {
     }
 
-    public Caja(String box_id, int change_available, String name_worker) {
+    public Caja(String box_id, int change_available, Employ employ) {
         this.box_id = box_id;
         this.change_available = change_available;
-        this.name_worker = name_worker;
+        this.employ = employ;
     }
 
     public Caja(String box_id, int change_available) {
@@ -36,11 +36,13 @@ public class Caja {
         this.change_available = change_available;
     }
 
-    public String getName_worker() {
-        return name_worker;
+    public Employ getEmploy() {
+        return employ;
     }
 
-    public void setName_worker(String name_worker) {
-        this.name_worker = name_worker;
+    public void setEmploy(Employ employ) {
+        this.employ = employ;
     }
+
+    
 }

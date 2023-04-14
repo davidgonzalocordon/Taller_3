@@ -1,98 +1,75 @@
 package co.edu.udes.Supermercado;
 
 import java.util.Date;
+import java.util.List;
 
 class Factura {
 
-    private String receipt_id;
-    private String[] name_product;
-    private int[] quantity_per_product;
-    private int[] value_per_product;
-    private int full_value;
-    private String name_client;
-    private String name_worker;
-    private String id_box;
+    private List<Producto> products;
+    private Employ employ;
+    private Client client;
+    private List<Integer> n_productos;
+    private Date fecha_venta;
 
-    public Factura() {
+    public Factura(List<Producto> products, Employ employ, Client client, Date fecha_venta) {
+        this.products = products;
+        this.employ = employ;
+        this.client = client;
+        this.fecha_venta = fecha_venta;
     }
 
-    public Factura(String receipt_id, String[] name_product, int[] quantity_per_product, int[] value_per_product, int full_value, String name_client, String name_worker, String id_box) {
-        this.receipt_id = receipt_id;
-        this.name_product = name_product;
-        this.quantity_per_product = quantity_per_product;
-        this.value_per_product = value_per_product;
-        this.full_value = full_value;
-        this.name_client = name_client;
-        this.name_worker = name_worker;
-        this.id_box = id_box;
+    public Factura(List<Producto> products, Employ employ, Client client) {
+        this.products = products;
+        this.employ = employ;
+        this.client = client;
     }
 
-    public Factura(String receipt_id) {
-        this.receipt_id = receipt_id;
+
+    public List<Producto> getProducts() {
+        return products;
     }
 
-    public String getReceipt_id() {
-        return receipt_id;
+    public void setProducts(List<Producto> products) {
+        this.products = products;
     }
 
-    public void setReceipt_id(String receipt_id) {
-        this.receipt_id = receipt_id;
+    public Employ getEmploy() {
+        return employ;
     }
 
-    public String[] getName_product() {
-        return name_product;
+    public void setEmploy(Employ employ) {
+        this.employ = employ;
     }
 
-    public void setName_product(String[] name_product) {
-        this.name_product = name_product;
+    public Client getClient() {
+        return client;
     }
 
-    public int[] getQuantity_per_product() {
-        return quantity_per_product;
+    public void setClient(Client client) {
+        this.client = client;
     }
 
-    public void setQuantity_per_product(int[] quantity_per_product) {
-        this.quantity_per_product = quantity_per_product;
+    public List<Integer> getN_productos() {
+        return n_productos;
     }
 
-    public int[] getValue_per_product() {
-        return value_per_product;
+    public void setN_productos(List<Integer> n_productos) {
+        this.n_productos = n_productos;
     }
 
-    public void setValue_per_product(int[] value_per_product) {
-        this.value_per_product = value_per_product;
+    public Date getFecha_venta() {
+        return fecha_venta;
     }
 
-    public int getFull_value() {
-        return full_value;
+    public void setFecha_venta(Date fecha_venta) {
+        this.fecha_venta = fecha_venta;
     }
 
-    public void setFull_value(int full_value) {
-        this.full_value = full_value;
+    public double getTotal() {
+        double total = 0.0;
+        for (int i = 0; i < products.size(); i++) {
+            total += products.get(i).getPrice()* n_productos.get(i);
+        }
+        return total;
     }
-
-    public String getName_client() {
-        return name_client;
-    }
-
-    public void setName_client(String name_client) {
-        this.name_client = name_client;
-    }
-
-    public String getName_worker() {
-        return name_worker;
-    }
-
-    public void setName_worker(String name_worker) {
-        this.name_worker = name_worker;
-    }
-
-    public String getId_box() {
-        return id_box;
-    }
-
-    public void setId_box(String id_box) {
-        this.id_box = id_box;
-    }
-
 }

@@ -1,41 +1,25 @@
 package co.edu.udes.Supermercado;
 
-import java.util.Date;
 
 public class Producto {
-    private double price; 
-    private String codigo_barras; 
-    private String name; 
-    private Date vencimiento; 
-    private boolean disponibilidad; 
-    private Date expedicion; 
+    private int id;
+    private String name;
+    private Provedor provider;
+    private double price;
 
-    public Producto() {
-    }
-
-    public Producto(double price, String codigo_barras, String name, Date vencimiento, boolean disponibilidad, Date expedicion) {
-        this.price = price;
-        this.codigo_barras = codigo_barras;
+    public Producto(int id, String name, Provedor provider, double price) {
+        this.id = id;
         this.name = name;
-        this.vencimiento = vencimiento;
-        this.disponibilidad = disponibilidad;
-        this.expedicion = expedicion;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
+        this.provider = provider;
         this.price = price;
     }
 
-    public String getCodigo_barras() {
-        return codigo_barras;
+    public int getId() {
+        return id;
     }
 
-    public void setCodigo_barras(String codigo_barras) {
-        this.codigo_barras = codigo_barras;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -46,28 +30,20 @@ public class Producto {
         this.name = name;
     }
 
-    public Date getVencimiento() {
-        return vencimiento;
+    public Provedor getProvider() {
+        return provider;
     }
 
-    public void setVencimiento(Date vencimiento) {
-        this.vencimiento = vencimiento;
+    public void setProvider(Provedor provider) {
+        this.provider = provider;
     }
 
-    public boolean isDisponibilidad() {
-        return disponibilidad;
+    public double getPrice() {
+        return price;
     }
 
-    public void setDisponibilidad(boolean disponibilidad) {
-        this.disponibilidad = disponibilidad;
-    }
-
-    public Date getExpedicion() {
-        return expedicion;
-    }
-
-    public void setExpedicion(Date expedicion) {
-        this.expedicion = expedicion;
+    public void setPrice(double price) {
+        this.price = price;
     }
  
 }
