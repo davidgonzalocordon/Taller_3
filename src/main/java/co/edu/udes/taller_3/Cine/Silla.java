@@ -5,16 +5,16 @@ class Silla {
     private String id_chair;
     private boolean bought;
     private boolean premium; 
-    private Sala room; 
+    private String room_id; 
 
     public Silla() {
     }
 
-    public Silla(String id_chair, boolean bought, boolean premium, Sala room) {
+    public Silla(String id_chair,String room_id ,boolean bought , boolean premium) {
         this.id_chair = id_chair;
         this.bought = bought;
         this.premium = premium;
-        this.room = room;
+        this.room_id = room_id;
     }
 
     public String getId_chair() {
@@ -39,6 +39,14 @@ class Silla {
 
     public void setPremium(boolean premium) {
         this.premium = premium;
+    }
+
+    public String getRoom_id() {
+        return room_id;
+    }
+
+    public void setRoom_id(String room_id) {
+        this.room_id = room_id;
     }
     
     
