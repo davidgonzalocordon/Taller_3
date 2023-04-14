@@ -69,7 +69,5 @@ public class Producto {
     public void setExpedicion(Date expedicion) {
         this.expedicion = expedicion;
     }
-    
-    
-    
+ 
 }

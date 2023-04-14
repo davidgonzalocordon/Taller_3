@@ -1,22 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package co.edu.udes.Supermercado;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- *
- * @author ASUS
- */
 public class CrearCaja {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         int Selection = 0, change_available;

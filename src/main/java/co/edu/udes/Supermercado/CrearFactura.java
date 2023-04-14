@@ -1,14 +1,15 @@
 
-package co.edu.udes.taller_3.Cine;
+package co.edu.udes.Supermercado;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 
-public class CrearReciboComida {
+public class CrearFactura {
 
-    static ArrayList<Recibo_Comida> recibos = new ArrayList<>();
+    
+   static ArrayList<Factura> recibos = new ArrayList<>();
     static Scanner read = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -73,18 +74,18 @@ public class CrearReciboComida {
             full_value = full_value + value_per_product[i];
         }
 
-        Recibo_Comida recibo = new Recibo_Comida(receipt_id, name_product, quantity_per_product, value_per_product, full_value, name_client, name_worker, id_box);
+        Factura recibo = new Factura(receipt_id, name_product, quantity_per_product, value_per_product, full_value, name_client, name_worker, id_box);
         recibos.add(recibo);
         System.out.println("Recibo creado correctamente");
     }
 
-    private static void verRecibos(List<Recibo_Comida> recibos) {
+    private static void verRecibos(List<Factura> recibos) {
         if (recibos.size() == 0)
         {
             System.out.println("No hay recibos registrados.");
             return;
         }
-        for (Recibo_Comida recibo : recibos)
+        for (Factura recibo : recibos)
         {
             System.out.println("Recibo ID: " + recibo.getReceipt_id());
             System.out.println("Productos:");
@@ -99,5 +100,5 @@ public class CrearReciboComida {
             System.out.println("----------");
         }
     }
-
+    
 }

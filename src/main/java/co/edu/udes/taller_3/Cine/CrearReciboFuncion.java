@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package co.edu.udes.taller_3.Cine;
 
 import java.util.ArrayList;
@@ -9,10 +6,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- *
- * @author ASUS
- */
 public class CrearReciboFuncion {
 
     static ArrayList<Recibo_Funcion> listaRecibos = new ArrayList<>();

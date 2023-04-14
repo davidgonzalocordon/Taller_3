@@ -63,7 +63,5 @@ public class Employ {
     public void setNumbre_celphone(String numbre_celphone) {
         this.numbre_celphone = numbre_celphone;
     }
-    
-    
-    
+
 }

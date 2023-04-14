@@ -11,7 +11,7 @@ public class CrearProducto {
 
     public static void main(String[] args) {
         ArrayList<Producto_Comida> productos = new ArrayList<Producto_Comida>();
-        Scanner scanner = new Scanner(System.in);
+        Scanner read = new Scanner(System.in);
         boolean ejecucion = true;
 
         while (ejecucion)
@@ -21,23 +21,23 @@ public class CrearProducto {
             System.out.println("2. Ver la lista de productos creados");
             System.out.println("3. Cerrar la ejecución");
 
-            int opcion = scanner.nextInt();
-            scanner.nextLine(); // Consume el salto de línea después de la entrada del usuario
+            int opcion = read.nextInt();
+            read.nextLine(); // Consume el salto de línea después de la entrada del usuario
 
             switch (opcion)
             {
                 case 1:
                     System.out.println("Ingrese el nombre del producto:");
-                    String nombre = scanner.nextLine();
+                    String nombre = read.nextLine();
                     System.out.println("Ingrese el precio del producto:");
-                    int precio = scanner.nextInt();
-                    scanner.nextLine(); // Consume el salto de línea después de la entrada del usuario
+                    int precio = read.nextInt();
+                    read.nextLine(); // Consume el salto de línea después de la entrada del usuario
                     System.out.println("Ingrese el ID del producto:");
-                    String id = scanner.nextLine();
+                    String id = read.nextLine();
                     System.out.println("Ingrese el tipo de producto (comida/bebida):");
-                    String tipo = scanner.nextLine();
+                    String tipo = read.nextLine();
                     System.out.println("Ingrese el nombre del proveedor:");
-                    String proveedor = scanner.nextLine();
+                    String proveedor = read.nextLine();
 
                     Producto_Comida nuevoProducto = new Producto_Comida(nombre, precio, id, tipo, proveedor);
                     productos.add(nuevoProducto);
@@ -65,7 +65,6 @@ public class CrearProducto {
             }
         }
 
-        scanner.close();
     }
 }
 

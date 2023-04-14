@@ -9,7 +9,7 @@ public class CrearBodega {
 
     
     public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
+            Scanner read = new Scanner(System.in);
             ArrayList<Bodega> listaBodegas = new ArrayList<>();
 
             while (true)
@@ -18,16 +18,16 @@ public class CrearBodega {
                 System.out.println("2. Ver lista de objetos Bodega");
                 System.out.println("3. Cerrar ejecución");
 
-                int opcion = scanner.nextInt();
+                int opcion = read.nextInt();
 
                 switch (opcion)
                 {
                     case 1:
                         System.out.println("Ingrese nombre de trabajador:");
-                        String nombreTrabajador = scanner.next();
+                        String nombreTrabajador = read.next();
 
                         System.out.println("Ingrese cantidad de productos:");
-                        int cantidadProductos = scanner.nextInt();
+                        int cantidadProductos = read.nextInt();
 
                         String[] productos = new String[cantidadProductos];
                         int[] cantidades = new int[cantidadProductos];
@@ -35,11 +35,11 @@ public class CrearBodega {
                         for (int i = 0; i < cantidadProductos; i++)
                         {
                             System.out.println("Ingrese nombre del producto " + (i + 1) + ":");
-                            String producto = scanner.next();
+                            String producto = read.next();
                             productos[i] = producto;
 
                             System.out.println("Ingrese cantidad del producto " + (i + 1) + ":");
-                            int cantidad = scanner.nextInt();
+                            int cantidad = read.nextInt();
                             cantidades[i] = cantidad;
                         }
 

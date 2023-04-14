@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package co.edu.udes.taller_3.Cine;
 
 import java.text.ParseException;
@@ -11,15 +8,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- *
- * @author ASUS
- */
 public class CrearFuncion {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         SimpleDateFormat formatoFechaHora = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         Scanner read = new Scanner(System.in);
