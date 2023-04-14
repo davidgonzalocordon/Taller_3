@@ -4,55 +4,44 @@ package co.edu.udes.taller_3.Cine;
 class Cliente {
     private String name;
     private String id;
-    private String phone_number;
-    private boolean targeta_cine;
-    private Recibo_Funcion receipt_function;
-    private Recibo_Comida receipt_food;
+    private boolean cinemaCard;
 
     public Cliente() {
     }
-
-    public Cliente(String name, String id, String phone_number, boolean premiun) {
+    public Cliente(String name, String id, boolean cinemaCard) {
         this.name = name;
         this.id = id;
-        this.phone_number = phone_number;
-        this.targeta_cine = premiun;
+        this.cinemaCard = cinemaCard;
     }
-
-    Cliente(String name, String id, String phone_number, boolean targeta_cine, Recibo_Funcion receipt_function) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    public String getName() {
-        return name;
-    }
+    
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public void setId(String id) {
         this.id = id;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public void setCinemaCard(boolean cinemaCard) {
+        this.cinemaCard = cinemaCard;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public String getName() {
+        return name;
     }
 
-    public boolean isPremiun() {
-        return targeta_cine;
+    public String getId() {
+        return id;
     }
 
-    public void setPremiun(boolean premiun) {
-        this.targeta_cine = premiun;
+    public boolean isCinemaCard() {
+        return cinemaCard;
     }
 
+    @Override
+    public String toString() {
+        return "Client{" + "name=" + name + ", id=" + id + ", cinemaCard=" + cinemaCard + '}';
+    }
+    
 }

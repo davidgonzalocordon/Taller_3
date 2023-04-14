@@ -1,38 +1,29 @@
-
 package co.edu.udes.taller_3.Cine;
 
+import java.util.Arrays;
 import java.util.Date;
 
 public class Sala {
-    private String id; 
-    private int number_of_normal_chairs;
-    private int number_of_premium_chairs;
-    private int number_of_total_chairs;
-    private String type_of_room;
-    private Date date_function; 
-    private String name_worker;
 
+    private String id;
+    private String type;
+    private int numberOfCommonChairs;
+    private int numberOfPremiumChairs;
+    private int totalOfChairs;
+    private Silla[] chair;
+    
     public Sala() {
     }
 
-    public Sala(String id, int number_of_normal_chairs, int number_of_premium_chairs, int number_of_total_chairs, String type_of_room, Date date_function, String name_worker) {
+    public Sala(String id, String type, int numberOfCommonChairs, int numberOfPremiumChairs, int totalOfChairs, Silla[] chair) {
         this.id = id;
-        this.number_of_normal_chairs = number_of_normal_chairs;
-        this.number_of_premium_chairs = number_of_premium_chairs;
-        this.number_of_total_chairs = number_of_total_chairs;
-        this.type_of_room = type_of_room;
-        this.date_function = date_function;
-        this.name_worker = name_worker;
-    }
-
-    
-
-    public Sala(String id) {
-        this.id = id;
+        this.type = type;
+        this.numberOfCommonChairs = numberOfCommonChairs;
+        this.numberOfPremiumChairs = numberOfPremiumChairs;
+        this.totalOfChairs = totalOfChairs;
+        this.chair = chair;
     }
     
-    
-
     public String getId() {
         return id;
     }
@@ -41,55 +32,49 @@ public class Sala {
         this.id = id;
     }
 
-    public int getNumber_of_normal_chairs() {
-        return number_of_normal_chairs;
+    public String getType() {
+        return type;
     }
 
-    public void setNumber_of_normal_chairs(int number_of_normal_chairs) {
-        this.number_of_normal_chairs = number_of_normal_chairs;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public int getNumber_of_premium_chairs() {
-        return number_of_premium_chairs;
+    public int getNumberOfCommonChairs() {
+        return numberOfCommonChairs;
     }
 
-    public void setNumber_of_premium_chairs(int number_of_premium_chairs) {
-        this.number_of_premium_chairs = number_of_premium_chairs;
+    public void setNumberOfCommonChairs(int numberOfCommonChairs) {
+        this.numberOfCommonChairs = numberOfCommonChairs;
     }
 
-    public int getNumber_of_total_chairs() {
-        return number_of_total_chairs;
+    public int getNumberOfPremiumChairs() {
+        return numberOfPremiumChairs;
     }
 
-    public void setNumber_of_total_chairs(int number_of_total_chairs) {
-        this.number_of_total_chairs = number_of_total_chairs;
+    public void setNumberOfPremiumChairs(int numberOfPremiumChairs) {
+        this.numberOfPremiumChairs = numberOfPremiumChairs;
     }
 
-    public String getType_of_room() {
-        return type_of_room;
+    public int getTotalOfChairs() {
+        return totalOfChairs;
     }
 
-    public void setType_of_room(String type_of_room) {
-        this.type_of_room = type_of_room;
+    public void setTotalOfChairs(int totalOfChairs) {
+        this.totalOfChairs = totalOfChairs;
     }
 
-    public Date getDate_function() {
-        return date_function;
+    public Silla[] getChair() {
+        return chair;
     }
 
-    public void setDate_function(Date date_function) {
-        this.date_function = date_function;
+    public void setChair(Silla[] chair) {
+        this.chair = chair;
     }
 
-
-    public String getName_worker() {
-        return name_worker;
+    @Override
+    public String toString() {
+        return "Cinema_Room{" + "id=" + id + ", type=" + type + ", numberOfCommonChairs=" + numberOfCommonChairs + ", numberOfPremiumChairs=" + numberOfPremiumChairs + ", totalOfChairs=" + totalOfChairs + ", chair=" + Arrays.toString(chair) + '}';
     }
 
-    public void setName_worker(String name_worker) {
-        this.name_worker = name_worker;
-    }
-    
-    
-    
 }

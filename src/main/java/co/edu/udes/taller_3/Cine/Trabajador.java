@@ -5,66 +5,64 @@ import java.util.Date;
 public class Trabajador {
 
     private String name;
-    private String schedule;
-    private int salary;
     private String id;
-    private String phone_number;
+    private String celphoneNumber;
+    private String schedule;
+    private double salary;
 
     public Trabajador() {
     }
 
-    public Trabajador(String name, String horario, int salary, String id, String phone_number) {
+    public Trabajador(String name, String id, String celphoneNumber, String schedule, double salary) {
         this.name = name;
-        this.schedule = horario;
-        this.salary = salary;
         this.id = id;
-        this.phone_number = phone_number;
-    }
-
-    public Trabajador(String name) {
-        this.name = name;
+        this.celphoneNumber = celphoneNumber;
+        this.schedule = schedule;
+        this.salary = salary;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getId() {
+        return id;
     }
 
-    public String getHorario() {
+    public String getCelphoneNumber() {
+        return celphoneNumber;
+    }
+
+    public String getSchedule() {
         return schedule;
     }
 
-    public void setHorario(String horario) {
-        this.schedule = horario;
-    }
-
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
-    public String getId() {
-        return id;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setId(String id) {
         this.id = id;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public void setCelphoneNumber(String celphoneNumber) {
+        this.celphoneNumber = celphoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setSchedule(String schedule) {
+        this.schedule = schedule;
     }
-    
-    
 
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Worker{" + "name=" + name + ", id=" + id + ", celphoneNumber=" + celphoneNumber + ", schedule=" + schedule + ", salary=" + salary + '}';
+    }
 }

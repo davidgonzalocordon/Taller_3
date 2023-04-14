@@ -1,64 +1,56 @@
-
 package co.edu.udes.taller_3.Cine;
 
 public class Producto_Comida {
-    private String name;
-    private int price;
+
     private String id;
-    private String kind_of_product;
-    private String name_supplier;
+    private String name;
+    private String typeOfProduct;
+    private double foodPrice;
 
     public Producto_Comida() {
     }
 
-    public Producto_Comida(String name, int price, String id, String kind_of_product, String name_supplier) {
-        this.name = name;
-        this.price = price;
+    public Producto_Comida(String id, String name, String typeOfProduct, double foodPrice) {
         this.id = id;
-        this.kind_of_product = kind_of_product;
-        this.name_supplier = name_supplier;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public String getId() {
-        return id;
+        this.typeOfProduct = typeOfProduct;
+        this.foodPrice = foodPrice;
     }
 
     public void setId(String id) {
         this.id = id;
     }
 
-    public String getKind_of_product() {
-        return kind_of_product;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setKind_of_product(String kind_of_product) {
-        this.kind_of_product = kind_of_product;
+    public void setTypeOfProduct(String typeOfProduct) {
+        this.typeOfProduct = typeOfProduct;
     }
 
-    public String getName_supplier() {
-        return name_supplier;
+    public void setFoodPrice(double foodPrice) {
+        this.foodPrice = foodPrice;
     }
 
-    public void setName_supplier(String name_supplier) {
-        this.name_supplier = name_supplier;
+    public String getId() {
+        return id;
     }
 
-    
-    
+    public String getName() {
+        return name;
+    }
+
+    public String getTypeOfProduct() {
+        return typeOfProduct;
+    }
+
+    public double getFoodPrice() {
+        return foodPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "Product_Food{" + "id=" + id + ", name=" + name + ", typeOfProduct=" + typeOfProduct + ", foodPrice=" + foodPrice + '}';
+    }
 }

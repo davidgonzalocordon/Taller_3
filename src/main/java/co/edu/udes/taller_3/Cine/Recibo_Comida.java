@@ -1,97 +1,78 @@
 package co.edu.udes.taller_3.Cine;
 
+import java.util.Arrays;
+
 class Recibo_Comida {
 
-    private String receipt_id;
-    private String[] name_product;
-    private int[] quantity_per_product;
-    private int[] value_per_product;
-    private int full_value;
-    private String name_client;
-    private String name_worker;
-    private String id_box;
+    private String billId;
+    private Producto_Comida[] productNames;
+    private int[] numberOfProduc;
+    private double totalPrice;
+    private Cliente client;
+    private Trabajador worker;
+
+    public Recibo_Comida(String billId, Producto_Comida[] productNames, int[] numberOfProduc, double totalPrice, Cliente client, Trabajador worker) {
+        this.billId = billId;
+        this.productNames = productNames;
+        this.numberOfProduc = numberOfProduc;
+        this.totalPrice = totalPrice;
+        this.client = client;
+        this.worker = worker;
+    }
 
     public Recibo_Comida() {
     }
 
-    public Recibo_Comida(String receipt_id, String[] name_product, int[] quantity_per_product, int[] value_per_product, int full_value, String name_client, String name_worker, String id_box) {
-        this.receipt_id = receipt_id;
-        this.name_product = name_product;
-        this.quantity_per_product = quantity_per_product;
-        this.value_per_product = value_per_product;
-        this.full_value = full_value;
-        this.name_client = name_client;
-        this.name_worker = name_worker;
-        this.id_box = id_box;
+    public String getBillId() {
+        return billId;
     }
 
-    public Recibo_Comida(String receipt_id) {
-        this.receipt_id = receipt_id;
+    public void setBillId(String billId) {
+        this.billId = billId;
     }
 
-    public String getReceipt_id() {
-        return receipt_id;
+    public Producto_Comida[] getProductNames() {
+        return productNames;
     }
 
-    public void setReceipt_id(String receipt_id) {
-        this.receipt_id = receipt_id;
+    public void setProductNames(Producto_Comida[] productNames) {
+        this.productNames = productNames;
     }
 
-    public String[] getName_product() {
-        return name_product;
+    public int[] getNumberOfProduc() {
+        return numberOfProduc;
     }
 
-    public void setName_product(String[] name_product) {
-        this.name_product = name_product;
+    public void setNumberOfProduc(int[] numberOfProduc) {
+        this.numberOfProduc = numberOfProduc;
     }
 
-    public int[] getQuantity_per_product() {
-        return quantity_per_product;
+    public double getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setQuantity_per_product(int[] quantity_per_product) {
-        this.quantity_per_product = quantity_per_product;
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
-    public int[] getValue_per_product() {
-        return value_per_product;
+    public Cliente getClient() {
+        return client;
     }
 
-    public void setValue_per_product(int[] value_per_product) {
-        this.value_per_product = value_per_product;
+    public void setClient(Cliente client) {
+        this.client = client;
     }
 
-    public int getFull_value() {
-        return full_value;
+    public Trabajador getWorker() {
+        return worker;
     }
 
-    public void setFull_value(int full_value) {
-        this.full_value = full_value;
+    public void setWorker(Trabajador worker) {
+        this.worker = worker;
     }
 
-
-    public String getName_client() {
-        return name_client;
+    @Override
+    public String toString() {
+        return "Bill_Food{" + "billId=" + billId + ", productNames=" + Arrays.toString(productNames) + ", productId=" + Arrays.toString(numberOfProduc) + ", totalPrice=" + totalPrice + ", client=" + client + ", worker=" + worker + '}';
     }
-
-    public void setName_client(String name_client) {
-        this.name_client = name_client;
-    }
-
-    public String getName_worker() {
-        return name_worker;
-    }
-
-    public void setName_worker(String name_worker) {
-        this.name_worker = name_worker;
-    }
-
-    public String getId_box() {
-        return id_box;
-    }
-
-    public void setId_box(String id_box) {
-        this.id_box = id_box;
-    }
-    
 }

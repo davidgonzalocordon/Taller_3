@@ -1,57 +1,79 @@
-
 package co.edu.udes.taller_3.Cine;
 
 import java.util.Date;
 
 class Funcion {
-    private String name_movie; 
-    private String room_id;
-    private Date star_time;
-    private Date end_time;
+
+    private Pelicula movie;
+    private Sala cinemaRoom;
+    private String startTime;
+    private String finalTime;
+    private String date;
+    private String id;
+
+    public Funcion(Pelicula movie, Sala cinemaRoom, String startTime, String finalTime, String date, String id) {
+        this.movie = movie;
+        this.cinemaRoom = cinemaRoom;
+        this.startTime = startTime;
+        this.finalTime = finalTime;
+        this.date = date;
+        this.id = id;
+    }
 
     public Funcion() {
     }
 
-    public Funcion(String name_movie, String room_id, Date star_time, Date end_time) {
-        this.name_movie = name_movie;
-        this.room_id = room_id;
-        this.star_time = star_time;
-        this.end_time = end_time;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public Date getStar_time() {
-        return star_time;
+    public void setMovie(Pelicula movie) {
+        this.movie = movie;
     }
 
-    public void setStar_time(Date star_time) {
-        this.star_time = star_time;
+    public void setCinemaRoom(Sala cinemaRoom) {
+        this.cinemaRoom = cinemaRoom;
     }
 
-    public Date getEnd_time() {
-        return end_time;
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
     }
 
-    public void setEnd_time(Date end_time) {
-        this.end_time = end_time;
+    public void setFinalTime(String finalTime) {
+        this.finalTime = finalTime;
     }
 
-    public String getName_movie() {
-        return name_movie;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public void setName_movie(String name_movie) {
-        this.name_movie = name_movie;
+    public String getId() {
+        return id;
     }
 
-    public String getRoom_id() {
-        return room_id;
+    public Pelicula getMovie() {
+        return movie;
     }
 
-    public void setRoom_id(String room_id) {
-        this.room_id = room_id;
+    public Sala getCinemaRoom() {
+        return cinemaRoom;
     }
 
-    
-    
-    
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public String getFinalTime() {
+        return finalTime;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    @Override
+    public String toString() {
+        return "Function{" + "movie=" + movie + ", cinemaRoom=" + cinemaRoom + ", startTime=" + startTime + ", finalTime=" + finalTime + ", date=" + date + ", id=" + id + '}';
+    }
+
 }

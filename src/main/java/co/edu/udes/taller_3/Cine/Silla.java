@@ -2,53 +2,57 @@
 package co.edu.udes.taller_3.Cine;
 
 class Silla {
-    private String id_chair;
+    private String idChair;
     private boolean bought;
-    private boolean premium; 
-    private String room_id; 
+    private boolean premium;
+    private double price;
+    
+    public Silla(String idChair, boolean bought, boolean premium, double price) {
+        this.idChair = idChair;
+        this.bought = bought;
+        this.premium = premium;
+        this.price = price;
+    }
 
     public Silla() {
     }
-
-    public Silla(String id_chair,String room_id ,boolean bought , boolean premium) {
-        this.id_chair = id_chair;
-        this.bought = bought;
-        this.premium = premium;
-        this.room_id = room_id;
+    
+    
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public String getId_chair() {
-        return id_chair;
-    }
-
-    public void setId_chair(String id_chair) {
-        this.id_chair = id_chair;
-    }
-
-    public boolean isBought() {
-        return bought;
+    public void setIdChair(String idChair) {
+        this.idChair = idChair;
     }
 
     public void setBought(boolean bought) {
         this.bought = bought;
     }
 
-    public boolean isPremium() {
-        return premium;
-    }
-
     public void setPremium(boolean premium) {
         this.premium = premium;
     }
 
-    public String getRoom_id() {
-        return room_id;
+    public double getPrice() {
+        return price;
     }
 
-    public void setRoom_id(String room_id) {
-        this.room_id = room_id;
+    public String getIdChair() {
+        return idChair;
     }
-    
-    
-    
+
+    public boolean isBought() {
+        return bought;
+    }
+
+    public boolean isPremium() {
+        return premium;
+    }
+
+    @Override
+    public String toString() {
+        return "Chair{" + "idChair=" + idChair + ", bought=" + bought + ", premium=" + premium + ", price=" + price +'}';
+    }
+
 }

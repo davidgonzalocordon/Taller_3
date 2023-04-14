@@ -1,83 +1,78 @@
-
 package co.edu.udes.taller_3.Cine;
 
 import java.util.Date;
 
-
 class Pelicula {
+
     private String name;
     private String id;
-    private String kind_of_movie;
-    private String age_restriction;
-    private Date release_date;
-    private String name_supplier;
+    private String movieGenre;
+    private String ageRestriction;
+    private String copyright;
+    private String duration;
+
+    public Pelicula(String name, String id, String movieGenre, String ageRestriction, String copyright, String duration) {
+        this.name = name;
+        this.id = id;
+        this.movieGenre = movieGenre;
+        this.ageRestriction = ageRestriction;
+        this.copyright = copyright;
+        this.duration = duration;
+    }
 
     public Pelicula() {
-    }
-
-    public Pelicula(String name, String id, String kind_of_movie, String age_restriction, Date duration, String name_supplier) {
-        this.name = name;
-        this.id = id;
-        this.kind_of_movie = kind_of_movie;
-        this.age_restriction = age_restriction;
-        this.release_date = duration;
-        this.name_supplier = name_supplier;
-    }
-
-    public Pelicula(String name, String id, String kind_of_movie, Date duration, String name_supplier) {
-        this.name = name;
-        this.id = id;
-        this.kind_of_movie = kind_of_movie;
-        this.release_date = duration;
-        this.name_supplier = name_supplier;
-    }
-
-    public Pelicula(String name) {
-        this.name = name;
-    }
-    
-    
-
-    public String getName() {
-        return name;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public String getId() {
-        return id;
-    }
-
     public void setId(String id) {
         this.id = id;
     }
 
-    public String getKind_of_movie() {
-        return kind_of_movie;
+    public void setMovieGenre(String movieGenre) {
+        this.movieGenre = movieGenre;
     }
 
-    public void setKind_of_movie(String kind_of_movie) {
-        this.kind_of_movie = kind_of_movie;
+    public void setAgeRestriction(String ageRestriction) {
+        this.ageRestriction = ageRestriction;
     }
 
-    public String getAge_restriction() {
-        return age_restriction;
+    public void setCopyright(String copyright) {
+        this.copyright = copyright;
     }
 
-    public void setAge_restriction(String age_restriction) {
-        this.age_restriction = age_restriction;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
-    public Date getDuration() {
-        return release_date;
+    public String getName() {
+        return name;
     }
 
-    public void setDuration(Date duration) {
-        this.release_date = duration;
+    public String getId() {
+        return id;
     }
-    
-    
-    
+
+    public String getMovieGenre() {
+        return movieGenre;
+    }
+
+    public String getAgeRestriction() {
+        return ageRestriction;
+    }
+
+    public String getCopyright() {
+        return copyright;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    @Override
+    public String toString() {
+        return "Movie{" + "name=" + name + ", id=" + id + ", movieGenre=" + movieGenre + ", ageRestriction=" + ageRestriction + ", copyright=" + copyright + ", duration=" + duration + '}';
+    }
 }
