@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CrearTabajador {
+public class CrearProveedor {
 
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
-        int Selection = 0, salary;
-        List<Trabajador> objet = new ArrayList<Trabajador>();
-        String name, schedule, id, phone_number;
-
+        int Selection = 0;
+        List<Proveedor> objet = new ArrayList<Proveedor>();
+        String name, id_food_received, name_move = null;
+        boolean facture_food = false, facture_move = false;
         System.out.println("Bienvenido porfavor Escoja una de las tres acciones: ");
         System.out.println("1) Crear");
         System.out.println("2) Lista");
@@ -35,20 +35,16 @@ public class CrearTabajador {
                 case 1:
                     System.out.println("Introdusca el nombre: ");
                     name = read.next();
-                    System.out.println("Introdusca el horario: ");
-                    schedule = read.next();
-                    System.out.println("Introdusca el Salario: ");
-                    salary = read.nextInt();
-                    System.out.println("Introdusca el ID: ");
-                    id = read.next();
-                    System.out.println("Introdusca el Numero de Telefono: ");
-                    phone_number = read.next();
 
-                    Trabajador employ = new Trabajador(name, schedule, salary, id, phone_number);
-                    objet.add(employ);
-                    for (Trabajador e : objet)
+                    System.out.println("Inserte la id del recibo: ");
+                    id_food_received = read.next();
+
+                    Proveedor proveedor = new Proveedor(name, id_food_received);
+                    objet.add(proveedor);
+
+                    for (Proveedor e : objet)
                     {
-                        System.out.println("- " + e.getName());
+                        System.out.println("- " + e.getName() + ", id factura " + e.getId_food_received());
                     }
 
                     System.out.println("Porfavor Ecoja la accion que desea hacer: ");
@@ -67,11 +63,12 @@ public class CrearTabajador {
                             Selection = read.nextInt();
                         } while (Selection > 3 || Selection < 1);
                     }
+
                     break;
                 case 2:
-                    for (Trabajador e : objet)
+                    for (Proveedor e : objet)
                     {
-                        System.out.println("- " + e.getName());
+                        System.out.println("- " + e.getName() + ", id factura " + e.getId_food_received());
                     }
 
                     System.out.println("Porfavor Ecoja la accion que desea hacer: ");
@@ -90,14 +87,14 @@ public class CrearTabajador {
                             Selection = read.nextInt();
                         } while (Selection > 3 || Selection < 1);
                     }
+
                     break;
                 case 3:
                     System.out.println("Gracias Por Usar Este Software");
                     System.exit(0);
                     break;
             }
+
         } while (true);
-
     }
-
 }

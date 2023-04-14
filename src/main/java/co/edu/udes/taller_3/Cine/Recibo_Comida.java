@@ -3,28 +3,30 @@ package co.edu.udes.taller_3.Cine;
 class Recibo_Comida {
 
     private String receipt_id;
-    private Producto_Comida product_food;
     private String[] name_product;
     private int[] quantity_per_product;
     private int[] value_per_product;
     private int full_value;
-    private Cliente client;
-    private Trabajador worker;
-    private Caja box;
+    private String name_client;
+    private String name_worker;
+    private String id_box;
 
     public Recibo_Comida() {
     }
 
-    public Recibo_Comida(String receipt_id, Producto_Comida product_food, String[] name_product, int[] quantity_per_product, int[] value_per_product, int full_value, Cliente client, Trabajador worker, Caja box) {
+    public Recibo_Comida(String receipt_id, String[] name_product, int[] quantity_per_product, int[] value_per_product, int full_value, String name_client, String name_worker, String id_box) {
         this.receipt_id = receipt_id;
-        this.product_food = product_food;
         this.name_product = name_product;
         this.quantity_per_product = quantity_per_product;
         this.value_per_product = value_per_product;
         this.full_value = full_value;
-        this.client = client;
-        this.worker = worker;
-        this.box = box;
+        this.name_client = name_client;
+        this.name_worker = name_worker;
+        this.id_box = id_box;
+    }
+
+    public Recibo_Comida(String receipt_id) {
+        this.receipt_id = receipt_id;
     }
 
     public String getReceipt_id() {
@@ -65,6 +67,31 @@ class Recibo_Comida {
 
     public void setFull_value(int full_value) {
         this.full_value = full_value;
+    }
+
+
+    public String getName_client() {
+        return name_client;
+    }
+
+    public void setName_client(String name_client) {
+        this.name_client = name_client;
+    }
+
+    public String getName_worker() {
+        return name_worker;
+    }
+
+    public void setName_worker(String name_worker) {
+        this.name_worker = name_worker;
+    }
+
+    public String getId_box() {
+        return id_box;
+    }
+
+    public void setId_box(String id_box) {
+        this.id_box = id_box;
     }
     
 }

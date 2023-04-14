@@ -54,7 +54,5 @@ class Cliente {
     public void setPremiun(boolean premiun) {
         this.targeta_cine = premiun;
     }
-    
-    
-    
+
 }

@@ -20,6 +20,10 @@ public class Employ {
         this.numbre_celphone = numbre_celphone;
     }
 
+    public Employ(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

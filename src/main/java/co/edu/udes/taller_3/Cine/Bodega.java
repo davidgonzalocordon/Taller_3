@@ -2,24 +2,24 @@
 package co.edu.udes.taller_3.Cine;
 
 public class Bodega {
-    private Producto_Comida[] product_food; 
+    private String[] product_food; 
     private int[] quantity_product;
-    private Trabajador worker; 
+    private String name_worker; 
 
     public Bodega() {
     }
 
-    public Bodega(Producto_Comida[] product_food, int[] quantity_product, Trabajador worker) {
+    public Bodega(String[] product_food, int[] quantity_product, String name_worker) {
         this.product_food = product_food;
         this.quantity_product = quantity_product;
-        this.worker = worker;
+        this.name_worker = name_worker;
     }
 
-    public Producto_Comida[] getProduct_food() {
+    public String[] getProduct_food() {
         return product_food;
     }
 
-    public void setProduct_food(Producto_Comida[] product_food) {
+    public void setProduct_food(String[] product_food) {
         this.product_food = product_food;
     }
 
@@ -31,14 +31,12 @@ public class Bodega {
         this.quantity_product = quantity_product;
     }
 
-    public Trabajador getWorker() {
-        return worker;
+    public String getName_worker() {
+        return name_worker;
     }
 
-    public void setWorker(Trabajador worker) {
-        this.worker = worker;
+    public void setName_worker(String name_worker) {
+        this.name_worker = name_worker;
     }
-    
-    
-    
+ 
 }

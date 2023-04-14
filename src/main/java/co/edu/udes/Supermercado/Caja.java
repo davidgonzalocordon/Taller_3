@@ -9,37 +9,45 @@ package co.edu.udes.Supermercado;
  * @author ASUS
  */
 public class Caja {
-    private Factura factura;
-    private double cambioDisponible; 
-    private Employ employ; 
-    private String numCaja; 
+   private String box_id;
+    private int change_available;
+    private String name_worker;
 
     public Caja() {
     }
 
-    public Caja(Factura factura, double cambioDisponible, Employ employ, String numCaja) {
-        this.factura = factura;
-        this.cambioDisponible = cambioDisponible;
-        this.employ = employ;
-        this.numCaja = numCaja;
+    public Caja(String box_id, int change_available, String name_worker) {
+        this.box_id = box_id;
+        this.change_available = change_available;
+        this.name_worker = name_worker;
     }
 
-    public double getCambioDisponible() {
-        return cambioDisponible;
+    public Caja(String box_id, int change_available) {
+        this.box_id = box_id;
+        this.change_available = change_available;
     }
 
-    public void setCambioDisponible(double cambioDisponible) {
-        this.cambioDisponible = cambioDisponible;
+    public String getBox_id() {
+        return box_id;
     }
 
-    public String getNumCaja() {
-        return numCaja;
+    public void setBox_id(String box_id) {
+        this.box_id = box_id;
     }
 
-    public void setNumCaja(String numCaja) {
-        this.numCaja = numCaja;
+    public int getChange_available() {
+        return change_available;
     }
 
-    
-    
+    public void setChange_available(int change_available) {
+        this.change_available = change_available;
+    }
+
+    public String getName_worker() {
+        return name_worker;
+    }
+
+    public void setName_worker(String name_worker) {
+        this.name_worker = name_worker;
+    }
 }

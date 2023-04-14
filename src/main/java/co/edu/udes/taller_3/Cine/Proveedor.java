@@ -3,22 +3,20 @@ package co.edu.udes.taller_3.Cine;
 
 class Proveedor {
     private String name;
-    private Recibo_Comida food_received;
-    private String movie_rights;
+    private String id_food_received;
 
     public Proveedor() {
     }
 
-    public Proveedor(String name, Recibo_Comida recivo_comida, String derechos_peliculas) {
+    public Proveedor(String name, String id_food_received) {
         this.name = name;
-        this.food_received = recivo_comida;
-        this.movie_rights = derechos_peliculas;
+        this.id_food_received = id_food_received;
     }
 
     public Proveedor(String name) {
         this.name = name;
     }
-
+    
     public String getName() {
         return name;
     }
@@ -27,22 +25,12 @@ class Proveedor {
         this.name = name;
     }
 
-    public Recibo_Comida getRecivo_comida() {
-        return food_received;
+    public String getId_food_received() {
+        return id_food_received;
     }
 
-    public void setRecivo_comida(Recibo_Comida recivo_comida) {
-        this.food_received = recivo_comida;
+    public void setId_food_received(String id_food_received) {
+        this.id_food_received = id_food_received;
     }
 
-    public String getDerechos_peliculas() {
-        return movie_rights;
-    }
-
-    public void setDerechos_peliculas(String derechos_peliculas) {
-        this.movie_rights = derechos_peliculas;
-    }
-    
-    
-    
 }

@@ -58,7 +58,17 @@ public class CrearCliente {
                     System.out.println("2) Lista");
                     System.out.println("3) Salir");
                     Selection = read.nextInt();
-
+                    if (Selection > 3 || Selection < 1)
+                    {
+                        do
+                        {
+                            System.out.println("Porfavor Escoja una opcion Valida: ");
+                            System.out.println("1) Crear");
+                            System.out.println("2) Lista");
+                            System.out.println("3) Salir");
+                            Selection = read.nextInt();
+                        } while (Selection > 3 || Selection < 1);
+                    }
                     break;
                 case 2:
                     for (Cliente e : objet)
@@ -71,7 +81,17 @@ public class CrearCliente {
                     System.out.println("2) Lista");
                     System.out.println("3) Salir");
                     Selection = read.nextInt();
-
+                    if (Selection > 3 || Selection < 1)
+                    {
+                        do
+                        {
+                            System.out.println("Porfavor Escoja una opcion Valida: ");
+                            System.out.println("1) Crear");
+                            System.out.println("2) Lista");
+                            System.out.println("3) Salir");
+                            Selection = read.nextInt();
+                        } while (Selection > 3 || Selection < 1);
+                    }
                     break;
                 case 3:
                     System.out.println("Gracias Por Usar Este Software");

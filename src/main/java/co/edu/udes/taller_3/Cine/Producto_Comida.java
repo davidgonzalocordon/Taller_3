@@ -6,17 +6,17 @@ public class Producto_Comida {
     private int price;
     private String id;
     private String kind_of_product;
-    private Proveedor supplier;
+    private String name_supplier;
 
     public Producto_Comida() {
     }
 
-    public Producto_Comida(String name, int price, String id, String kind_of_product, Proveedor proveedor) {
+    public Producto_Comida(String name, int price, String id, String kind_of_product, String name_supplier) {
         this.name = name;
         this.price = price;
         this.id = id;
         this.kind_of_product = kind_of_product;
-        this.supplier = proveedor;
+        this.name_supplier = name_supplier;
     }
 
     public String getName() {
@@ -51,7 +51,14 @@ public class Producto_Comida {
         this.kind_of_product = kind_of_product;
     }
 
-    
+    public String getName_supplier() {
+        return name_supplier;
+    }
+
+    public void setName_supplier(String name_supplier) {
+        this.name_supplier = name_supplier;
+    }
+
     
     
 }
